@@ -1,48 +1,44 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title> Ruben's Personal Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruben's Personal Webpage</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
 </head>
-
 <body>
-
     <header class="header">
         <a href="#" class="logo">Ruben Alvarez</a>
         <nav class="navbar">
             <a href="#">Home</a>
-            <a href="#Projects" class="nav-link" >Projects</a>
+            <a href="#Projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="home">
-        <div class="home-image">
-            <img src="Photos/PFP.jpg" alt="Ruben Alvarez">
-        </div>
+    <main>
+        <section class="home">
+            <div class="home-image">
+                <img src="Photos/PFP.jpg" alt="Ruben Alvarez">
+            </div>
 
-        <div class="home-content">
-            <h1>About Me</h1>
-            <h3>Chemical Engineer Student</h3>
-            <p>B.S. in Chemical Engineering</p>
-            <p>M.E. in Pharmaceutical Engineering</p>
-            <div class="horizontal_div1">
-            </div>
-            <div class="container">
-                <div class="btn-box">
-                    <a href="https://www.linkedin.com/in/rubensalvarez/">LinkedIn</a>
+            <div class="home-content">
+                <h1>About Me</h1>
+                <h3>Chemical Engineer Student</h3>
+                <p>B.S. in Chemical Engineering</p>
+                <p>M.E. in Pharmaceutical Engineering</p>
+                <div class="container">
+                    <div class="btn-box">
+                        <a href="https://www.linkedin.com/in/rubensalvarez/">LinkedIn</a>
+                    </div>
+                    <div class="btn-box">
+                        <a href="PDF/Resume2024.pdf" target="_blank">Resume</a>
+                    </div>
                 </div>
-                <div class="btn-box">
-                    <a target="_blank" href="PDF/Resume2024.pdf">Resume</a>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
     
     <section class="desc">
         <div class="desc-title">
@@ -58,6 +54,7 @@
                 a chemical engineer, who encouraged me to pursue chemical engineering as an alternative to chemistry, aligning 
                 with my passion for creating and lifelong learning.
             </p>
+            <br />
             <p>
                 This decision transformed my academic journey. Although I faced significant challenges in undergraduate studies,
                 I was exposed to fascinating industries that solidified my interest in pharmaceuticals rather than medicine.
@@ -97,11 +94,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="popup-img">
-                <span>&times;</span>
-                <img src="Photos/LSAMPPoster2024.jpg"
-                alt=""/>
             </div>
         </div>
     </section>
@@ -160,21 +152,6 @@
 <footer class="footer">
         <p>&copy; 2024 Ruben Alvarez. All rights reserved.</p>
 </footer>
-
-<script>
-    document.querySelectorAll('.projects-item1 img').forEach(image =>{
-        image.onclick = () =>{
-            document.querySelector('.popup-img').style.display = 'block';
-            document.querySelector('.popup-img img').src = image.getAttribute('src');
-        }
-    });
-
-document.querySelector('.popup-img').onclick = () =>{
-    document.querySelector('.popup-img').style.display = 'none';
-};
-
-
-</script>
 
 </body>
 </html>
