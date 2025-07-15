@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+
+:root {
+  --primary-blue: #0A2342;
+  --secondary-blue: #2E6DA4;
+  --accent-blue: #5BC0DE;
+  --light-gray: #F8F8F8; 
+  --text-color: #333333;
+  --white: #FFFFFF;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +19,7 @@
 }
 
 body {
-    background: #ffffff;
+    background: var(--light-gray);
     overflow-x: hidden;
 }
 
@@ -19,7 +30,8 @@ body {
     left: 0;
     width: 100%;
     padding: 1rem;
-    background: #336a92;
+    background-color: var(--primary-blue);
+    color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +40,7 @@ body {
 
 .logo {
     font-size: 2rem;
-    color: #ededed;
+    color: var(--light-gray);
     text-decoration: none;
     font-weight: 600;
     padding: 0 1rem;
@@ -41,7 +53,7 @@ body {
 
 .navbar a {
     font-size: 1.2rem;
-    color: #ededed;
+    color: var(--secondary-blue);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -49,7 +61,7 @@ body {
 }
 
 .navbar a:hover {
-    color: black;
+    color: var(--accent-blue);
 }
 
 /* Home section */
@@ -68,11 +80,12 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 5%;
-    box-shadow: 0 0 25px #658ba7;
+    box-shadow: 0 0 25px var(--primary-blue);
 }
 
 .home-content {
-    background: #336a92;
+    background: var(--primary-blue);
+    color: var(--light-gray);
     padding: 2rem;
     border-radius: 15px;
     max-width: 600px;
@@ -81,19 +94,16 @@ body {
 
 .home-content h1 {
     font-size: 2.2rem;
-    color: #ededed;
     margin-bottom: 1rem;
 }
 
 .home-content h3 {
     font-size: 1.8rem;
-    color: #ededed;
     margin-bottom: 0.5rem;
 }
 
 .home-content p {
     font-size: 1.2rem;
-    color: white;
     margin-bottom: 0.5rem;
 }
 
@@ -118,7 +128,6 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: #336a92;
     border: 2px solid #ededed;
     border-radius: 7px;
     font-size: 1.5rem;
@@ -153,7 +162,7 @@ body {
 }
 
 .btn-box a:hover {
-    color: #336a92;
+    color: var(--primary-blue);
 }
 
 /* Content sections */
@@ -190,6 +199,63 @@ body {
     max-width: 100%;
     height: auto;
     transition: transform 0.3s ease;
+}
+
+/* Style the image on your page */
+.project-thumbnail {
+    cursor: pointer; /* Indicates it's clickable */
+}
+
+/* The Lightbox (hidden by default) */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box (could be top, center, etc.) */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Lightbox Content (image) */
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 80%; /* Adjust as needed */
+    max-height: 80%; /* Adjust as needed */
+}
+
+/* The Close Button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Optional: Caption text */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
 }
 
 .current-title{
